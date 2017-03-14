@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Enter new store name:"
+@newstorename = gets.chomp
+@newStore = Store.create(name: "#{@newstorename}")
+@newStore.errors.full_messages.each do |message|
+  puts message
+end
