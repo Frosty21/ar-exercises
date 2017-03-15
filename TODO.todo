@@ -20,11 +20,11 @@ That said, feel free to connect to your Postgres database using `psql` or pgAdmi
 ✔ 1. Create a new Postgres database. Use `psql postgres` to connect to the database server. Use `create database ar_exercises;` to create the database. @done (2017-03-14, 3:53:37 PM)
 ✔ 2. Take a look at the `establish_connection` method call in `setup.rb`. This will allow Active Record to connect to *your* Postgres database. If you are using vagrant, you should not need to make any changes here. @done (2017-03-14, 3:53:54 PM)
 ✔ 3. Run `bundle install` to install the gems. @done (2017-03-14, 3:53:58 PM)
-☐ 4. Run the first exercise file to make sure the database connection is working: `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there. @high 
+✔ 4. Run the first exercise file to make sure the database connection is working: `ruby exercises/exercise_1.rb`. It should just output "Exercise 1" at the end, since you don't yet have any code in there. @high @done (2017-03-14, 5:16:57 PM)
 
 ### Running Exercises
 
-☐ Complete the exercises by modifying the appropriate `exercises/exercise_*.rb` file and run the exercise using the `ruby` command.@today 
+✔ Complete the exercises by modifying the appropriate `exercises/exercise_*.rb` file and run the exercise using the `ruby` command.@today @done (2017-03-14, 5:17:04 PM)
 
 Example:
 

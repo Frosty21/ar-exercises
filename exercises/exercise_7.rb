@@ -8,11 +8,33 @@ require_relative './exercise_6'
 
 puts "Exercise 7"
 puts "----------"
-
-# Your code goes here ...
+# checks for name, revenu and apparel
 puts "Enter new store name:"
 @newstorename = gets.chomp
-@newStore = Store.create(name: "#{@newstorename}")
+while @newstorename.length() < 3
+	puts "must be more than 3 characters"
+	@newstoremen = gets.chomp 
+end 
+puts "Enter new store revenue:"
+@newstorevenue = gets.chomp.to_i
+while @newstorevenue <= 0
+	puts "Don't be silly, please enter a store revenue"  
+ 	@newstorevenue = gets.chomp.to_i
+end
+puts "Does new store have mens apparel? true or false:"
+@newstoremen = gets.chomp
+while @newstoremen != "true" && @newstoremen != "false"
+	puts "Don't be silly, please enter mens apparel true or false?"  
+ 	@newstoremen = gets.chomp
+end
+puts "Does new store have womens apparel? true or false:"
+@newstorewomen = gets.chomp
+while @newstorewomen != "true" && @newstorewomen != "false"
+	puts "Don't be silly, please enter womens apparel true or false?"  
+ 	@newstorewomen = gets.chomp
+end
+
+@newStore = Store.create(name: "#{@newstorename}", annual_revenue: "#{@newstorevenue}", mens_apparel: "#{@newstoremen}", womens_apparel: "#{@newstorewomen}" )
 @newStore.errors.full_messages.each do |message|
   puts message
 end
